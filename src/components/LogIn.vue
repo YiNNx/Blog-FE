@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { LogIn } from '@/requests/index'
+import AuthService from '@/requests/auth'
 
 export default {
   name: 'LogIn',
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     login () {
-      LogIn(this.loginForm.email, this.loginForm.password)
+      AuthService.LogIn(this.loginForm.email, this.loginForm.password)
     }
   }
 }
