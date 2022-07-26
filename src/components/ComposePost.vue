@@ -7,8 +7,8 @@
   <div class="render-wrap">
     <div id="render" v-html="currentValue"></div>
   </div>
-</div>
 <button v-on:click="post">Post</button>
+</div>
 </template>
 
 <script>
@@ -73,7 +73,7 @@ export default {
 
 .editer-wrap input{
   font-family: Courier;
-  font-size: 1.8em;
+  font-size: 1.4em;
   border-radius: 24px;
   border: none;
   display: block;
@@ -93,9 +93,9 @@ export default {
   word-break: break-word;
 }
 
-button{
+.layout button{
   position: fixed;
-  top:1em;
+  top:2em;
   left: 2em;
   background: #626262;
   border-radius: 40px;
@@ -103,13 +103,13 @@ button{
   display: block;
   text-align: center;
   padding: 14px 40px;
-  width: 150px;
+  width: 120px;
   outline: none;
   color: rgb(255, 255, 255);     /* 设置输入框中竖线的颜色 */
   transition: 0.25s;
   cursor: pointer;
   font-family: Courier;
-  font-size: 1.5em
+  font-size: 1em
 }
 
 </style>

@@ -18,7 +18,7 @@ class PostService {
         }
       })
       .catch(failResponse => {
-        alert('failed :(')
+        alert('No authorization :(')
       })
   }
 
