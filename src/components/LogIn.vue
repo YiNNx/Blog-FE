@@ -2,7 +2,7 @@
   <div class="box">
     <h1>Log In</h1>
       <br>
-      <input type="text" v-model="loginForm.email" placeholder="Email"/>
+      <input type="text" v-model="loginForm.email" placeholder="Username"/>
       <input type="password" v-model="loginForm.password" placeholder="Password"/>
       <button v-on:click="login">Log In</button>
   </div>
@@ -73,7 +73,7 @@ export default {
   padding: 14px 40px;
   width: 220px;
   outline: none;
-  color: white;     /* 设置输入框中竖线的颜色 */
+  color: rgb(207, 207, 207);     /* 设置输入框中竖线的颜色 */
   transition: 0.25s;
   cursor: pointer;    /* 设置光标的样式 */
 }

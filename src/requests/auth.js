@@ -24,11 +24,10 @@ class AuthService {
         if (response.data.success) {
           localStorage.setItem('token', response.data.data.token)
           alert('log in successfully!')
-        } else {
-          alert('log in failed\ncheck your email and password')
         }
       })
       .catch(failResponse => {
+        alert('log in failed\ncheck your email and password')
       })
   }
 
