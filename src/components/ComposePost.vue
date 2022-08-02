@@ -1,10 +1,10 @@
 <template>
-  <div class="layout">
+  <div class="layout"  >
   <div class="editer-wrap">
     <input type="text" v-model="title" placeholder="Title"/>
     <textarea id="editer" v-model="markValue"></textarea>
   </div>
-  <div class="render-wrap">
+  <div class="render-wrap" v-if="this.deviceType == 'pc'">
     <div id="render" v-html="currentValue"></div>
   </div>
 <button v-on:click="post">Post</button>
@@ -20,12 +20,20 @@ export default {
   data () {
     return {
       markValue: '',
-      md: null
+      md: null,
+      deviceType: ''
     }
   },
   computed: {
     currentValue () {
       return this.md.render(this.markValue)
+    }
+  },
+  mounted () {
+    if (this._isMobile()) {
+      this.deviceType = 'mobile'
+    } else {
+      this.deviceType = 'pc'
     }
   },
   created () {
@@ -34,7 +42,12 @@ export default {
   methods: {
     post () {
       PostService.Post(this.title, this.md.render(this.markValue))
+    },
+    _isMobile () {
+      const flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag
     }
+
   }
 }
 </script>

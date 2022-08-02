@@ -11,7 +11,7 @@ import ComposePost from '@/components/ComposePost.vue'
 export default {
   name: 'ComposeView',
   components: {
-    ComposePost
+    ComposePost: ComposePost
   }
 }
 </script>

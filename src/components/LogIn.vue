@@ -27,6 +27,7 @@ export default {
       AuthService.LogIn(this.loginForm.email, this.loginForm.password)
     }
   }
+
 }
 </script>
 
@@ -73,9 +74,10 @@ export default {
   padding: 14px 40px;
   width: 220px;
   outline: none;
-  color: rgb(207, 207, 207);     /* 设置输入框中竖线的颜色 */
+  color: rgb(255, 255, 255);     /* 设置输入框中竖线的颜色 */
   transition: 0.25s;
   cursor: pointer;    /* 设置光标的样式 */
+  font-family: Courier;
 }
 
 /* 设置鼠标移人到按钮上的样式 */

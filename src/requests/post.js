@@ -2,7 +2,7 @@ import axios from 'axios'
 import authHeader from '@/utils/auth'
 
 axios.defaults.timeout = 50000
-axios.defaults.baseURL = 'http://api.blog.just-plain.fun:3000/api/v1/'
+axios.defaults.baseURL = 'https://blog.just-plain.fun/api/v1/'
 axios.defaults.headers = authHeader()
 
 class PostService {
@@ -22,8 +22,12 @@ class PostService {
       })
   }
 
-  LogOut () {
-    localStorage.removeItem('token')
+  GetPosts () {
+    return axios.get('/post').then(response => response)
+  }
+
+  GetPostDetail (pid) {
+    return axios.get('/post/' + pid).then(response => response)
   }
 }
 
