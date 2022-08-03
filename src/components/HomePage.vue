@@ -1,5 +1,5 @@
 <template>
-    <div class="post-list" v-for="post in posts" :key="post">
+    <div class="post-column" v-for="post in posts" :key="post">
         <div class="post">
             <div class="post-name"><router-link :to="{path:'/post/'+post.pid}">{{post.title}}</router-link></div>
             <div class="post-content">{{post.excerpt}}</div>
@@ -23,6 +23,7 @@ export default {
   data () {
     return {
       posts: []
+    //   typed: new Typed('.element')
     }
   },
   created () {
@@ -37,41 +38,28 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-/*post页面样式 */
-
-/*通用样式*/
-*{
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-a{
-    text-decoration: none;
-}
-
-.post-list{
+.post-column{
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 10rem;
+    margin-bottom: 10rem;
     text-align: left;
 }
 
 .post{
+    background-color: #ffffff;
     padding: 2.5rem;
     margin: 0 auto 0.63rem;
     cursor: pointer;
     overflow: hidden;
     display: grid;
     /* border: 2px solid #d4d4d4; */
-    background-color: rgb(255, 255, 255);
-    border-radius: 1.8rem;
-    margin-bottom: -7.5rem;
+    /* border-radius: 1.8rem; */
+    margin-bottom: -8rem;
 }
 
 .post-name{
-    background-color: rgb(255, 255, 255);
     text-overflow: hidden;
     overflow: hidden;
     white-space: nowrap;
@@ -84,38 +72,32 @@ a{
     font-size: 2ch;
 }
 .post-name a{
-    background-color: rgb(255, 255, 255);
     color: black;
 }
 
 .post-content{
-    background-color: rgb(255, 255, 255);
     line-height: 1rem;
     padding-top: 1.2rem;
     padding-bottom: 0.6rem;
 }
 
 .post-date{
-    background-color: rgb(255, 255, 255);
     float: left;
     padding-right: 5rem;
 }
 
 .post-info{
-    background-color: rgb(255, 255, 255);
     float: right;
     text-align: right;
 
     padding: 0.2rem 0;
 }
 .post-info li{
-    background-color: rgb(255, 255, 255);
     float: left;
     display: inline;
     padding: 0 10px;
 }
 .post-info a{
-    background-color: rgb(255, 255, 255);
     color: gray;
 }
 .post-info a:hover {

@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .layout {
   width: 98%;
   height: 88%;

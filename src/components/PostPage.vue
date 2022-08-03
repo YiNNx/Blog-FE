@@ -20,8 +20,7 @@ export default {
   name: 'PostPage',
   data () {
     return {
-      post: {},
-      md: null
+      post: {}
     }
   },
   created () {
@@ -39,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 /*post页面样式 */
 
@@ -47,7 +46,6 @@ export default {
 *{
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
 }
 a{
     text-decoration: none;
@@ -62,14 +60,12 @@ a{
     overflow: hidden;
     display: grid;
     /* border: 2px solid #d4d4d4; */
-    background-color: rgb(255, 255, 255);
     border-radius: 1.8rem;
     margin-bottom: 1.5rem;
 }
 
 .post-name{
     padding: 2rem 2rem;
-    background-color: rgb(255, 255, 255);
     text-overflow: hidden;
     overflow: hidden;
     white-space: nowrap;
@@ -82,13 +78,11 @@ a{
     font-size: 2ch;
 }
 .post-name a{
-    background-color: rgb(255, 255, 255);
     color: black;
 }
 
 .post-content{
     padding: 2rem 2rem;
-    background-color: rgb(255, 255, 255);
     line-height: 2rem;
     padding-top: 1.2rem;
     padding-bottom: 0.6rem;
@@ -97,26 +91,22 @@ a{
 .post-date{
     padding: 2rem 2rem;
 
-    background-color: rgb(255, 255, 255);
     float: left;
     padding-right: 5rem;
 }
 
 .post-info{
-    background-color: rgb(255, 255, 255);
     float: right;
     text-align: right;
 
     padding: 0.2rem 0;
 }
 .post-info li{
-    background-color: rgb(255, 255, 255);
     float: left;
     display: inline;
     padding: 0 10px;
 }
 .post-info a{
-    background-color: rgb(255, 255, 255);
     color: gray;
 }
 .post-info a:hover {
