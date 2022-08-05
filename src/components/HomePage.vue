@@ -16,26 +16,26 @@
 </template>
 
 <script>
-import PostService from '@/requests/post'
+import PostService from '@/requests/post';
 
 export default {
   name: 'HomePage',
-  data () {
+  data() {
     return {
-      posts: []
+      posts: [],
     //   typed: new Typed('.element')
-    }
+    };
   },
-  created () {
-    PostService.GetPosts().then(response => {
-      this.posts = response.data.data
-    }).catch(err => console.log(err))
+  created() {
+    PostService.GetPosts().then((response) => {
+      this.posts = response.data.data;
+    }).catch((err) => console.log(err));
   },
   methods: {
 
-  }
+  },
 
-}
+};
 </script>
 
 <style scoped>
@@ -71,9 +71,6 @@ export default {
     padding-left: 7px;
     font-size: 2ch;
 }
-.post-name a{
-    color: black;
-}
 
 .post-content{
     line-height: 1rem;
@@ -108,4 +105,17 @@ export default {
     float: right;
 }
 
+@media screen and (max-width: 1000px) {
+  .post-column{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .post-column{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 </style>
