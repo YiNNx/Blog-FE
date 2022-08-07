@@ -16,6 +16,7 @@
 <style>
 
 body {
+  /* overflow: hidden; */
   background-color: #f8f8f8;
   margin: 0;
   padding:0;
@@ -53,7 +54,7 @@ a:hover {
   color: #4a6988;
   padding: 0.5rem 0.5rem;
   line-height: 5rem;
-  word-break: keep-all;
+  word-break: break-word;
   cursor: pointer;
 }
 
@@ -66,6 +67,19 @@ router-view:after {
   content: "";
   display: table;
   clear: both;
+}
+
+
+
+@media screen and (max-width: 500px) {
+.top-bar {
+  padding: 0 2rem;
+    line-height: 4rem;
+}
+.top-bar a {
+  line-height: 4rem;
+  font-size: 0.8rem;
+}
 }
 
 

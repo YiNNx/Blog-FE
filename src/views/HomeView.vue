@@ -70,7 +70,7 @@ export default {
   color: #4a6988;
   padding: 0rem 2rem;
   line-height: 6rem;
-  word-break: keep-all;
+  word-break: break-word;
 }
 
 .footer a:hover {
@@ -88,7 +88,7 @@ export default {
   color: #4a6988;
   padding: 0rem 0rem;
   line-height: 2rem;
-  word-break: keep-all;
+  word-break: break-word;
 }
 }
 </style>
