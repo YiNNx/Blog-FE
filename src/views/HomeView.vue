@@ -1,6 +1,6 @@
 <template>
      <div class="container">
-       <h1 class="typed-out">Hi, this is YiNN's Blog.</h1>
+       <h1 class="typed-out">Nice to See U ! Still developing...</h1>
     </div>
        <div class="print">
     <h1 ></h1>
@@ -44,11 +44,16 @@ export default {
   text-align: left;
 }
 
+.container p{
+  text-align: left;
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 .typed-out{
+    line-height: 3rem;
     overflow: hidden;
     border-right: .15em solid rgb(177, 177, 177);
     white-space: nowrap;
@@ -89,6 +94,32 @@ export default {
   padding: 0rem 0rem;
   line-height: 2rem;
   word-break: break-word;
+}
+
+.typed-out{
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    margin: 0 0;
+}
+}
+@media screen and (max-width: 400px) {
+  .footer{
+    padding: 0;
+    font-size: 10px;
+    height: 3rem;
+  }
+  .footer a,p {
+  text-decoration: none;
+  color: #4a6988;
+  padding: 0rem 0rem;
+  line-height: 2rem;
+  word-break: break-word;
+}
+
+.typed-out{
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
 }
 }
 </style>

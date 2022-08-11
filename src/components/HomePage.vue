@@ -55,11 +55,11 @@ export default {
     overflow: hidden;
     display: grid;
     /* border: 2px solid #d4d4d4; */
-    /* border-radius: 1.8rem; */
     margin-bottom: -8rem;
 }
 
 .post-name{
+    font-weight:bold;
     text-overflow: hidden;
     overflow: hidden;
     white-space: nowrap;
@@ -69,7 +69,7 @@ export default {
     float: left;
     border-left: 2px solid rgb(169, 169, 169);
     padding-left: 7px;
-    font-size: 2ch;
+    font-size: 2.5ch;
 }
 
 .post-content{
@@ -116,6 +116,14 @@ export default {
   .post-column{
     margin-left: 1rem;
     margin-right: 1rem;
+    
   }
+  .post{
+    padding: 1.7rem;
+    border-radius: 1rem;
+    margin-bottom: -9rem;
+
+}
+
 }
 </style>

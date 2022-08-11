@@ -60,6 +60,7 @@ export default {
   display: flex;
 }
 .editer-wrap,.render-wrap {
+  text-align: left;
   border-radius: 20px;
   flex: 1;
   width: 0;
@@ -91,7 +92,7 @@ export default {
   border: none;
   display: block;
   margin: auto;
-  text-align: center;
+  text-align: left;
   padding: 14px 10px;
   width: 600px;
   outline: none;

@@ -58,11 +58,11 @@ a{
 
 .post-detail{
   word-break: break-word;
-    padding: 3rem 3rem;
+    padding: 2rem 2rem;
     background-color: #ffffff;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: left;
     cursor: pointer;
     overflow: hidden;
@@ -133,6 +133,41 @@ a{
     line-height: 0.8rem;
     padding-top: 1.2rem;
     padding-bottom: 0.6rem;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+  .post-detail{
+    font-size: 0.6rem;
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+    margin-top: 0.2rem;
+    padding: 0rem 0.4rem;
+  }
+
+.post-content{
+    padding: 0rem 1rem;
+    line-height: 0.8rem;
+    padding-top: 1.2rem;
+    padding-bottom: 0.6rem;
+}
+
+ h1 {
+	font-size: 5em;
+}
+.md p {
+	font-size: 2em;
+}
+
+.md h2 {
+	font-size: 2.1em;
+}
+.md h3 {
+	font-size: 1.9em;
+}
+.md h4 {
+	font-size: 1.7em;
 }
 }
 
@@ -208,10 +243,10 @@ a{
 }
 
 .md h1 {
-	font-size: 1.75em;
+	font-size: 2em;
 	font-weight: 600;
 	margin: 24px 0 16px;
-	padding-bottom: 0.3em;
+	padding-bottom: 0.7em;
 	border-bottom: 1px solid #eaeaea;
 }
 
