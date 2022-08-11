@@ -48,7 +48,8 @@ export default {
 *{
     margin: 0;
     padding: 0;
-    overflow: auto;
+	text-overflow:ellipsis;
+	word-break:break-all;
 }
 
 a{
@@ -74,20 +75,19 @@ a{
     padding: 2rem 2rem;
     text-overflow: hidden;
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     display: block;
     flex: 0 0 auto;
-    max-width: 30em;
+    /* max-width: 30em; */
     float: left;
     border-left: 2px solid rgb(169, 169, 169);
     padding-left: 7px;
     font-size: 2ch;
 }
-.post-name a{
-    color: black;
-}
+
 
 .post-content{
+	overflow: hidden;
     padding: 2rem 2rem;
     line-height: 2rem;
     padding-top: 1.2rem;
@@ -114,9 +114,7 @@ a{
 .post-info a{
     color: gray;
 }
-.post-info a:hover {
-    color: black;
-}
+
 
 .post-tag {
     float: right;
@@ -139,7 +137,6 @@ a{
 }
 
 .md {
-	color: #303030;
 	word-wrap: break-word
 }
 
@@ -156,7 +153,6 @@ a{
 }
 
 .md p {
-	color: #303030;
 	margin: 0 0 16px
 }
 
@@ -181,16 +177,16 @@ a{
 }
 
 .md img.lazy {
-	min-width: 200px;
+	/* min-width: 200px; */
 	min-height: 100px;
 	background-color: #fdfdfd
 }
 
 .md img.js-lazy-loaded,.md img.emoji {
-	min-width: inherit;
+	/* min-width: inherit; */
 	min-height: inherit;
 	background-color: inherit;
-	max-width: 100%
+	/* max-width: 100% */
 }
 
 .md:not(.md) img:not(.emoji) {
@@ -205,11 +201,10 @@ a{
 }
 
 .md code {
-	/* font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
-	white-space: pre-wrap;
+	font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	word-break: break-word */
+	word-break: break-word
 }
 
 .md h1 {
@@ -218,7 +213,6 @@ a{
 	margin: 24px 0 16px;
 	padding-bottom: 0.3em;
 	border-bottom: 1px solid #eaeaea;
-	color: #303030
 }
 
 .md h1:first-child {
@@ -231,7 +225,6 @@ a{
 	margin: 24px 0 16px;
 	padding-bottom: 0.3em;
 	border-bottom: 1px solid #eaeaea;
-	color: #303030
 }
 
 .md h3 {
@@ -284,11 +277,9 @@ a{
 
 .md table:not(.code) {
 	margin: 16px 0;
-	color: #303030;
 	border: 0;
 	width: auto;
 	display: block;
-	overflow-x: auto
 }
 
 .md table:not(.code) tbody {
@@ -412,26 +403,24 @@ a{
 	text-align: right
 }
 
+pre {
+    overflow: auto;
+}
+
 .md pre {
+	overflow: auto;
+	word-break:break-all;	
 	margin-bottom: 16px;
 	font-size: 13px;
 	line-height: 1.6em;
-	overflow-x: auto;
 	border-radius: 2px
 }
 
 .md pre code {
-	white-space: pre;
-	word-wrap: normal;
-	overflow-wrap: normal
-}
-
-.md pre.plain-readme {
-	background: none;
-	border: 0;
-	padding: 0;
-	margin: 0;
-	font-size: 14px
+	overflow: auto;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	word-break:break-all;
 }
 
 .md dd {
